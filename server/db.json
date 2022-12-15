@@ -32,21 +32,26 @@
       "id": 5
     },
     {
-      "email": "teamsaw14@gmail.com",
-      "password": "$2a$10$IK74PgFGDLloLFN7rUDCd.nva2yids5REEcGkYXwaa3cOf/z3F.lO",
-      "firstname": "Nicolas",
-      "lastname": "HOULIAT",
+      "firstname": "test",
+      "lastname": "test",
+      "email": "teamsaw14@gmal.com",
+      "password": "$2a$10$B/SMwaYTM3Wx5ZF74nnfBuZypCMeapexck91rS/2ukWIwJSzIT7K.",
       "id": 6
     },
     {
-      "email": "nicolas.houliat@hotmail.com",
-      "password": "$2a$10$u5jQfk5MOY3DXohu75sKM.EiicziNqL2sm5oR2Fy5ncXCTPBp8VUa",
+      "email": "nicolaliat@hotmail.fr",
+      "password": "$2a$10$fyBzy78HxTMaESNGoecwxOKnWub2Nm5JbutCQrY8pvmvkt6lMMQ8O",
+      "id": 7
+    },
+    {
       "firstname": "Nicolas",
       "lastname": "HOULIAT",
+      "password": "$2a$10$xsRs4WimadYUl43lSoPlxOq04WS77nNH.ZYC4CVzMCFQKIuEd6gq.",
+      "email": "nicolas.houliat@mail.fr",
       "adress": "36 Bis Rue Croix de Maillet",
       "postalCode": "82600",
       "city": "Mas-Grenier",
-      "id": 7
+      "id": 8
     }
   ],
   "products": [
