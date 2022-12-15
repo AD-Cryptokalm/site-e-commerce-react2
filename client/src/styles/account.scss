@@ -1,0 +1,62 @@
+@import "./setting.scss";
+
+.account {
+    width: 80%;
+    margin: 10rem auto 0;
+    // height: 50vh;
+    padding: 0 8%;
+    color: $color1;
+    & h2 {
+      font-size: calc(1.2rem + 1.4vw);
+    }
+    & h3 {
+      font-size: calc(1rem + 1.1vw);
+    }
+    & p {
+      font-size: calc(1rem + 0.9vw);
+    }
+    & button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Dancing Script", sans-serif;
+      margin-bottom: 1.6rem;
+      font-size: calc(1rem + 0.8vw);
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      border: solid 1px $color1;
+      color: $color1;
+      transition: 0.2s ease-in;
+      position: relative;
+    filter: brightness(90%);
+    & div.btn-anim {
+      position: absolute;
+      width: 400%;
+      border-radius: 5px;
+      // background-color: white;
+      border: solid 1px $color1;
+      padding: 0.5rem;
+      bottom: -4rem;
+      left: 0;
+      margin: 0;
+      transition: 0.5s ease-in;
+      transform: scale(0);
+      // transform-origin: left;
+    }
+    &:hover {
+      transform: scale(1.05);
+      filter: brightness(1.5);
+      & div.btn-anim {
+        transform: scale(1);
+        background-color: rgb(171, 167, 167);
+      }
+    } 
+    }
+    &-block {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &-left {
+        width: 50%;
+    }
+}

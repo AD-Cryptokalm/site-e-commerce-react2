@@ -1,0 +1,51 @@
+@import "./setting.scss";
+
+.loginForm {
+  width: 30%;
+  margin: 6rem 0 0;
+  // height: 50vh;
+  padding: 0 8%;
+  color: $color1;
+  & h2 {
+    font-size: calc(1.2rem + 1.4vw);
+  }
+  & h3 {
+    font-size: calc(1rem + 1vw);
+    cursor: pointer;
+    &:hover {
+      filter: brightness(1.5);
+    }
+  }
+  & input {
+    font-family: "Dancing Script", sans-serif;
+    margin-bottom: 1.6rem;
+    font-size: calc(1rem + 0.8vw);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border: solid 1px $color1;
+    color: $color1;
+    // border-style: none;
+  }
+  & #form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.btn-form {
+  width: 40%;
+  transition: 0.2s ease-in;
+  filter: brightness(90%);
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(1.5);
+  }
+}
+
+// .forms-container {
+//   // width: 100%;
+//   // width: 100%;
+//   display: flex;
+//   // flex-direction: column;
+//   // justify-content: center;
+  
+// }
