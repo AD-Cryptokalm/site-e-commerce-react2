@@ -92,16 +92,13 @@ export default function UpdateProfil() {
           value={city}
           placeholder={userData.city}
         />
-        <div>
-          Veuillez renseigner votre email et mot de passe pour tout chagement.
-        </div>
          <input
           type="email"
           name="email"
           id="email"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
-          placeholder="Email"
+          placeholder="Email obligatoire !"
         />
         <input
           type="password"
@@ -109,7 +106,7 @@ export default function UpdateProfil() {
           id="password"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
-          placeholder="Mot de passe"
+          placeholder="Mot de passe obligatoire !"
         />
         <input className="btn-form" type="submit" value="Valider" />
       </form>

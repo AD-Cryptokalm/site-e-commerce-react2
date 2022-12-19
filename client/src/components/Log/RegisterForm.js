@@ -14,6 +14,8 @@ export default function RegisterForm() {
   const [postalCode, setPostalCode] = useState("");
   const [city, setCity] = useState("");
 
+  const errorEmail = document.getElementById("email-error");
+
   const handleChange = (e) => {
     e.preventDefault();
     axios({
@@ -38,7 +40,8 @@ export default function RegisterForm() {
         window.location = "/";
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response.data);
+        errorEmail.innerHTML = "Un email valide et un mot de passe sont nécessaires !";
         setEmail("");
         setPassword("");
       });
@@ -68,6 +71,7 @@ export default function RegisterForm() {
               value={lastname}
               placeholder="Prénom"
             />
+              <div id="email-error"></div>
             <input
               type="email"
               name="email"
@@ -84,7 +88,6 @@ export default function RegisterForm() {
               value={password}
               placeholder="Password"
             />
-            {/* <input className="btn-form" type="submit" value="S'inscrire" /> */}
             <input
               type="text"
               name="adress"

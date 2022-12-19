@@ -52,6 +52,16 @@
       "postalCode": "82600",
       "city": "Mas-Grenier",
       "id": 8
+    },
+    {
+      "email": "nicolas.houliat@hotmail.fr",
+      "password": "$2a$10$oucQs204G0R392oXqALpwOc6c5yTiWMYsj4IvHZSmuN/vbMpYF.Bu",
+      "firstname": "Nicolas",
+      "lastname": "HOULIAT",
+      "adress": "",
+      "postalCode": "82600",
+      "city": "Mas-Grenier",
+      "id": 9
     }
   ],
   "products": [

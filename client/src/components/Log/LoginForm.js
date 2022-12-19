@@ -7,6 +7,7 @@ export default function LoginForm() {
   const [isLogin, setIsLogin] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const errorEmail = document.getElementById("email-error");
   // const [user, setUser] = useState(null);
   
 
@@ -30,6 +31,7 @@ export default function LoginForm() {
         window.location = "/";
       })
       .catch((err) => {
+        errorEmail.innerHTML = "Paire email et password incorrects"
         console.log(err);
         setEmail("");
         setPassword("");
@@ -46,6 +48,7 @@ export default function LoginForm() {
         <div className="loginForm">
           <h2>Connectez-vous !</h2>
           <form action="" onSubmit={handleChange} id="form">
+            <div id="email-error"></div>
             <input
               type="text"
               name="email"
