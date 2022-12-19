@@ -1,15 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import axios from 'axios'
-// import {
-//   updateAdress,
-//   updateEmail,
-//   updateFirstname,
-// } from "../actions/userAction";
-// import { UidContext } from "../components/context/authContext";
 import "../styles/updateProfil.scss";
-import { updateUser } from "../actions/userAction";
+// import { updateUser } from "../actions/userAction";
 
 export default function UpdateProfil() {
   const userData = useSelector((state) => state.userReducer);
@@ -18,17 +11,27 @@ export default function UpdateProfil() {
   const [email, setEmail] = useState("");
   const [firstname, setFirstname] = useState(userData.firstname);
   const [lastname, setLastname] = useState(userData.lastname);
-  const [password, setPassword] = useState("")
+  const [password, setPassword] = useState(userData.password);
   const [adress, setAdress] = useState(userData.adress);
   const [postalCode, setPostalCode] = useState(userData.setPostalCode);
   const [city, setCity] = useState(userData.city);
   const dispatch = useDispatch();
+  const emailError = document.getElementById("email-error");
+  const passwordError = document.getElementById("password-error");
 
-  const handleChange = () => {
-    // e.preventDefault();
+  const handleChange = (e) => {
+    e.preventDefault();
+
+    if (email !== userData.email) {
+      return (emailError.innerHTML = "Email incorrect");
+    }
+    // if (password !== userData.password) {
+    //   return passwordError.innerHTML = "Mot de passe incorrect";
+    // }
+
     axios({
       method: "PUT",
-      url: `http://localhost:3000/users/${userData.id}`,
+      url: `http://localhost:3000/600/users/${userData.id}`,
       withCredentials: true,
       data: {
         firstname,
@@ -44,7 +47,12 @@ export default function UpdateProfil() {
         Authorization: `Bearer ${token}`,
       },
     })
-      .then((res) => dispatch(updateUser(userData.id, res)))
+      .then((res) => {
+        alert("Success")
+        console.log(res);
+         (emailError.innerHTML = "");
+         (passwordError.innerHTML = "");
+      })
       .catch((err) => console.log(err));
   };
 
@@ -92,7 +100,8 @@ export default function UpdateProfil() {
           value={city}
           placeholder={userData.city}
         />
-         <input
+        <div id="email-error"></div>
+        <input
           type="email"
           name="email"
           id="email"
@@ -100,14 +109,15 @@ export default function UpdateProfil() {
           value={email}
           placeholder="Email obligatoire !"
         />
-        <input
+        <div id="password-error"></div>
+        {/* <input
           type="password"
           name="password"
           id="password"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
           placeholder="Mot de passe obligatoire !"
-        />
+        /> */}
         <input className="btn-form" type="submit" value="Valider" />
       </form>
     </div>

@@ -19,21 +19,21 @@ export const getUser = (uid) => {
     }
   };
 };
-export const updateUser = (uid) => {
-  const token = localStorage.getItem("token");
+// export const updateUser = (uid) => {
+//   const token = localStorage.getItem("token");
   
-  return async (dispatch) => {
-    return axios ({
-      method:"PUT",
-      url: `http://localhost:3000/600/users/${uid}`,
-      withCredentials: true,
-      headers: {Authorization: `Bearer ${token}`},
+//   return async (dispatch) => {
+//     return axios ({
+//       method:"PUT",
+//       url: `http://localhost:3000/600/users/${uid}`,
+//       withCredentials: true,
+//       headers: {Authorization: `Bearer ${token}`},
       
-    })
-    .then((res) => {
-      dispatch({type: UPDATE_USER, payload: res.data.id})
-    })
-    .catch ((err) => console.log(err))
-  };
-};
+//     })
+//     .then((res) => {
+//       dispatch({type: UPDATE_USER, payload: res.data.id})
+//     })
+//     .catch ((err) => console.log(err))
+//   };
+// };
 

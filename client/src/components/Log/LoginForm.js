@@ -24,7 +24,6 @@ export default function LoginForm() {
     })
       .then((res) => {
         console.log(res);
-        // setUser(res.data.user.id);
         localStorage.setItem("token", res.data.accessToken);
         localStorage.setItem("uid", res.data.user.id);
         setIsLogin(true);
@@ -37,8 +36,6 @@ export default function LoginForm() {
         setPassword("");
       });
   };
-
-  // if (user) dispatch(getUser(user))
 
   return (
     <>
