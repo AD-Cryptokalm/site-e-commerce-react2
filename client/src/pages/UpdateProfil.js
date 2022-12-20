@@ -1,33 +1,28 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import "../styles/updateProfil.scss";
-// import { updateUser } from "../actions/userAction";
 
 export default function UpdateProfil() {
   const userData = useSelector((state) => state.userReducer);
-  // const token = useContext(UidContext);
   const token = localStorage.getItem("token");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [firstname, setFirstname] = useState(userData.firstname);
   const [lastname, setLastname] = useState(userData.lastname);
-  const [password, setPassword] = useState(userData.password);
   const [adress, setAdress] = useState(userData.adress);
   const [postalCode, setPostalCode] = useState(userData.setPostalCode);
   const [city, setCity] = useState(userData.city);
-  const dispatch = useDispatch();
   const emailError = document.getElementById("email-error");
   const passwordError = document.getElementById("password-error");
 
   const handleChange = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     if (email !== userData.email) {
       return (emailError.innerHTML = "Email incorrect");
     }
-    // if (password !== userData.password) {
-    //   return passwordError.innerHTML = "Mot de passe incorrect";
-    // }
+  
 
     axios({
       method: "PUT",
@@ -66,7 +61,7 @@ export default function UpdateProfil() {
           id="firstname"
           onChange={(e) => setFirstname(e.target.value)}
           value={firstname}
-          placeholder={userData.firstname}
+          placeholder={userData.firstname || "Nom"}
         />
         <input
           type="text"
@@ -74,7 +69,7 @@ export default function UpdateProfil() {
           id="lastname"
           onChange={(e) => setLastname(e.target.value)}
           value={lastname}
-          placeholder={userData.lastname}
+          placeholder={userData.lastname || "Prénom"}
         />
         <input
           type="text"
@@ -82,7 +77,7 @@ export default function UpdateProfil() {
           id="adress"
           onChange={(e) => setAdress(e.target.value)}
           value={adress}
-          placeholder={userData.adress}
+          placeholder={userData.adress || "N° et nom de voie"}
         />
         <input
           type="text"
@@ -90,7 +85,7 @@ export default function UpdateProfil() {
           id="postalCode"
           onChange={(e) => setPostalCode(e.target.value)}
           value={postalCode}
-          placeholder={userData.postalCode}
+          placeholder={userData.postalCode || "Code postal"}
         />
         <input
           type="text"
@@ -98,7 +93,7 @@ export default function UpdateProfil() {
           id="city"
           onChange={(e) => setCity(e.target.value)}
           value={city}
-          placeholder={userData.city}
+          placeholder={userData.city || "Ville"}
         />
         <div id="email-error"></div>
         <input
@@ -110,14 +105,14 @@ export default function UpdateProfil() {
           placeholder="Email obligatoire !"
         />
         <div id="password-error"></div>
-        {/* <input
+        <input
           type="password"
           name="password"
           id="password"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
           placeholder="Mot de passe obligatoire !"
-        /> */}
+        />
         <input className="btn-form" type="submit" value="Valider" />
       </form>
     </div>

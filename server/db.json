@@ -18,10 +18,10 @@
       "id": 3
     },
     {
-      "email": "azerty@gmail.com",
-      "password": "$2a$10$RHyF6zfP596TaImhRKVpNeRfKxo.zs3Z6/QL6ctJN61aLCAifAGhy",
-      "firstname": "azerty",
+      "firstname": "Azerty",
       "lastname": "azerty",
+      "password": "$2a$10$FWfsvQvbfn9ACQqjgrUMuun6JFVmBsrM9rwye4vIJ..xIt7Lrcmiu",
+      "email": "azerty@gmail.com",
       "id": 4
     },
     {
@@ -61,6 +61,24 @@
       "postalCode": "82600",
       "city": "Mas-Grenier",
       "id": 9
+    },
+    {
+      "firstname": "Nicolas",
+      "lastname": "HOULIAT",
+      "password": "$2a$10$h/mVRAX1.Swjv7MArOkXaOpTWIzb9PAfSnUtyUKINfjeyncFckcCy",
+      "email": "nicolas.houliat@hotmail.com",
+      "adress": "36 Bis Rue Croix de Maillet",
+      "city": "Mas-Grenier",
+      "id": 10
+    },
+    {
+      "firstname": "Nicolas",
+      "lastname": "HOULIAT",
+      "password": "$2a$10$0Dpp4YcOp9n7pmPw4./1ju1szomPWy3RGvXAF3GhRggcnglMATbNu",
+      "email": "nicolas.houliat@hotmail.frt",
+      "adress": "36 Bis Rue Croix de Maillet",
+      "city": "Mas-Grenier",
+      "id": 11
     }
   ],
   "products": [
