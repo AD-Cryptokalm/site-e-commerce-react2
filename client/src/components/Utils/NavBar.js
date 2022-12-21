@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 import "../../styles/navBar.scss";
 import { UidContext } from "../context/authContext";
 import Logout from "../Log/Logout";
-// import Home from "../../pages/Home";
-// import Products from "../../pages/Products";
 
 export default function NavBar() {
   const uid = useContext(UidContext);
@@ -14,9 +12,10 @@ export default function NavBar() {
       <div className="navBar-top flex">
         <div className="navBar-topText">
           Livraison gratuite à partir de 50 euros
-          <br /> en France Métropolitaine
+          en France Métropolitaine
         </div>
         <div className="navBar-topMenu flex">
+          <button className="navBar-btnMenuToogle"><i className="fa-solid fa-bars"></i></button>
           {uid ? (
             <>
               <NavLink to="/account">
@@ -28,7 +27,7 @@ export default function NavBar() {
               </>
             </>
           ) : (
-            <>
+            <div className="navBar-btnLog">
               <NavLink to="/login">
                 <div className="navBar-topMenuLink">Se connecter </div>
               </NavLink>
@@ -36,7 +35,7 @@ export default function NavBar() {
               <NavLink to="/register">
                 <div className="navBar-topMenuLink"> Créer un compte</div>
               </NavLink>
-            </>
+            </div>
           )}
           <NavLink to="/cart">
             <div className="navBar-topMenuLink">
