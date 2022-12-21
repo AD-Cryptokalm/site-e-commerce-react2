@@ -1,21 +1,28 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../../styles/navBar.scss";
 import { UidContext } from "../context/authContext";
 import Logout from "../Log/Logout";
+import ToogleMenu from "./ToogleMenu";
 
 export default function NavBar() {
   const uid = useContext(UidContext);
+  const [activeMenu, setActiveMenu] = useState(false);
+
+  const toogleMenu = () => {
+    activeMenu ? setActiveMenu(false) : setActiveMenu(true);
+  }
 
   return (
     <div className="navBar">
       <div className="navBar-top flex">
         <div className="navBar-topText">
-          Livraison gratuite à partir de 50 euros
-          en France Métropolitaine
+          Livraison gratuite à partir de 50 euros en France Métropolitaine
         </div>
         <div className="navBar-topMenu flex">
-          <button className="navBar-btnMenuToogle"><i className="fa-solid fa-bars"></i></button>
+          <button onClick={toogleMenu} className="navBar-btnMenuToogle">
+            <i className="fa-solid fa-bars"></i>
+          </button>
           {uid ? (
             <>
               <NavLink to="/account">
@@ -23,7 +30,7 @@ export default function NavBar() {
               </NavLink>
               <div> ou </div>
               <>
-                <Logout/>
+                <Logout />
               </>
             </>
           ) : (
@@ -61,6 +68,9 @@ export default function NavBar() {
             <input type="search" id="search" name="search" placeholder="Rechercher"></input> */}
           </div>
         </div>
+        {activeMenu ? (
+            <ToogleMenu/>
+          ) : (null) }
       </div>
       <div className="navBar-bottom flex">
         <div className="navBar-bottomRight">
