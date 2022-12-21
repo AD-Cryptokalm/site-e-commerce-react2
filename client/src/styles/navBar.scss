@@ -106,11 +106,15 @@
         border-top: solid 1px rgba(255, 255, 255, 0.792);
         padding: 0.5rem 0;
         font-weight: bold;
+        
     }
   }
   @media (max-width: 768px) {
     .navBar-top {
         flex-direction: column;
+    }
+    .navBar-topText {
+      margin-bottom: 0.5rem;
     }
     .navBar-topMenu {
         width: 100%;
@@ -127,6 +131,12 @@
     }
     .toogleMenu {
         display: block;
+    }
+    .navBar-bottomLeft {
+      display: none;
+    }
+    .navBar-bottom {
+      justify-content: center;
     }
   }
 }

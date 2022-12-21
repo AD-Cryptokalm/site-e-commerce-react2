@@ -24,7 +24,7 @@ export default function NavBar() {
             <i className="fa-solid fa-bars"></i>
           </button>
           {uid ? (
-            <>
+            <div className="navBar-btnLog">
               <NavLink to="/account">
                 <div className="navBar-topMenuLink">Mon compte </div>
               </NavLink>
@@ -32,7 +32,7 @@ export default function NavBar() {
               <>
                 <Logout />
               </>
-            </>
+            </div>
           ) : (
             <div className="navBar-btnLog">
               <NavLink to="/login">
@@ -46,8 +46,7 @@ export default function NavBar() {
           )}
           <NavLink to="/cart">
             <div className="navBar-topMenuLink">
-              <i className="fa-solid fa-cart-shopping navBar-iconCart"></i>
-              Panier
+              <i className="fa-solid fa-cart-shopping navBar-iconCart"></i> Panier
             </div>
           </NavLink>
           <div className="navBar-formSearch">
