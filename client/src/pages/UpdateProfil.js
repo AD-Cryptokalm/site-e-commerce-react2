@@ -16,8 +16,7 @@ export default function UpdateProfil() {
   const emailError = document.getElementById("email-error");
   const passwordError = document.getElementById("password-error");
 
-  const handleChange = (e) => {
-    // e.preventDefault();
+  const handleChange = () => {
 
     if (email !== userData.email) {
       return (emailError.innerHTML = "Email incorrect");

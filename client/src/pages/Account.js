@@ -32,7 +32,6 @@ export default function Account() {
         <p className="account-adress"></p>
       </div>
       </div>
-      
         <button className="toogle-updateProfil" onClick={handleClick}>
           <i className="fa-solid fa-file-pen"></i>
            <div className="btn-anim">Modifiez vôtre profil</div>

@@ -63,8 +63,6 @@ export default function NavBar() {
                 placeholder="Rechercher"
               />
             </form>
-            {/* <label for="search"><i className="fa-solid fa-magnifying-glass"></i></label>
-            <input type="search" id="search" name="search" placeholder="Rechercher"></input> */}
           </div>
         </div>
         {activeMenu ? (

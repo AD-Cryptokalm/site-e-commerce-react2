@@ -2,7 +2,6 @@ import "../../styles/loginForm.scss";
 import React, { useState } from "react";
 import axios from "axios";
 import Home from "../../pages/Home";
-// import Home from "../Home/Home";
 
 export default function RegisterForm() {
   const [isLogin, setIsLogin] = useState(false);
@@ -112,7 +111,6 @@ export default function RegisterForm() {
               value={city}
               placeholder="Ville"
             />
-
             <input className="btn-form" type="submit" value="S'inscrire" />
           </form>
         </div>

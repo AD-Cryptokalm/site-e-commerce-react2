@@ -8,8 +8,6 @@ export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const errorEmail = document.getElementById("email-error");
-  // const [user, setUser] = useState(null);
-  
 
   const handleChange = (e) => {
     e.preventDefault();
