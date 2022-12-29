@@ -8,6 +8,7 @@
     line-height: 3rem;
     // border-top: solid 1px $color1;
     position: relative;
+    color: $color1;
     &::before {
         content: "";
         display: block;
@@ -25,12 +26,15 @@
     }
     & li {
         font-size: calc(0.7rem + 0.9vw);
-        cursor: pointer;
     }
     & p {
         font-size: calc(0.7rem + 0.8vw); 
     }
     &-links {
         padding: 0;
+    }
+    &-link {
+        cursor: pointer;
+
     }
 }
